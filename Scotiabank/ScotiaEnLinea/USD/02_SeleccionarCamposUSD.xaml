@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1116,5054</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>670,4239</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SeleccionarRecorder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -55,20 +55,20 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Aquí se seleccionan los campos que deseamos que incluya el reporte de detalles de movimientos. Una vez realizado procedemos a la descarga del archivo obtenido.&#xA;&#xA;&#xA;&#xA;Nota: Es obligatorio incluir todos los campos en todos los casos. Por lo cual la selección de los checkboxes no es variable. Se seleccionan de uno en uno puesto que la plataforma no permite la implementación de un selector dinámico mediante la obtención de todos los campos en forma de tabla" DisplayName="SeleccionarCamposUSD" sap:VirtualizedContainerService.HintSize="680,4989" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Aquí se seleccionan los campos que deseamos que incluya el reporte de detalles de movimientos. Una vez realizado procedemos a la descarga del archivo obtenido.&#xA;&#xA;&#xA;&#xA;Nota: Es obligatorio incluir todos los campos en todos los casos. Por lo cual la selección de los checkboxes no es variable. Se seleccionan de uno en uno puesto que la plataforma no permite la implementación de un selector dinámico mediante la obtención de todos los campos en forma de tabla" DisplayName="SeleccionarCamposUSD" sap:VirtualizedContainerService.HintSize="680,4074" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Scotia En Linea - SEL'" sap:VirtualizedContainerService.HintSize="638,4765" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="61c470a6c62649f1cc593c6cd7fea95b" Selector="&lt;html title='SEL - Scotia en Línea' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Scotia En Linea - SEL'" sap:VirtualizedContainerService.HintSize="638,3842" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="61c470a6c62649f1cc593c6cd7fea95b" Selector="&lt;html title='SEL - Scotia en Línea' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,4619" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,3696" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Day" />
             </Sequence.Variables>
@@ -77,7 +77,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="Se obtiene fecha y hora del sistema como String para añadirse al nombre del archivo de descarga" DisplayName="ObtenerHora" sap:VirtualizedContainerService.HintSize="562,356" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence sap2010:Annotation.AnnotationText="Se obtiene fecha y hora del sistema como String para añadirse al nombre del archivo de descarga" DisplayName="ObtenerHora" sap:VirtualizedContainerService.HintSize="562,358" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -118,7 +118,7 @@
             </Sequence>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'TIPO'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_1">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fadc5ffd3a4a4fd34bb7060875717d18" Selector="&lt;webctrl id='tableExportar:0:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="45ce6800-6ff8-4eaa-bf2d-0d8fc01ddeb9" InformativeScreenshot="fadc5ffd3a4a4fd34bb7060875717d18" Selector="&lt;webctrl id='tableExportar:0:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -127,7 +127,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'MONEDA'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_2">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:1:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2680174d-f24c-4730-85e4-bcfa87b9f363" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:1:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -136,7 +136,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'USO FUTURO'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_3">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:2:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5abfd55e-2506-452d-9f19-512ec416a93a" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:2:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -145,7 +145,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'CUENTA'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_4">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:3:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6f573045-ac7e-415a-8551-d8636f2e0b1c" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:3:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -154,7 +154,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'FECHA'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_5">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:4:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="27c36124-74c2-4d35-a5c0-ffb82860d277" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:4:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -163,7 +163,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'REFERENCIA'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_6">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:5:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d7acefb3-6b28-4fd7-a4b7-e4faa29ebeb6" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:5:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -172,7 +172,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'IMPORTE'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_7">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:6:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9cda0a15-2320-48b5-a8cc-16e5817a3581" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:6:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -181,7 +181,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INCLUIR'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_8">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1cf34dc4131d3bb69aa1e2d85c9c5f12" Selector="&lt;webctrl id='tableExportar:7:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="71c6a1a3-6770-4c75-a77b-26f6454bc29b" InformativeScreenshot="1cf34dc4131d3bb69aa1e2d85c9c5f12" Selector="&lt;webctrl id='tableExportar:7:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -190,7 +190,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'SALDO'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_9">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:8:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46ef8919-13cf-491f-af7c-03fdb4f8b745" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:8:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -199,7 +199,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'TRANSACCION'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_10">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="32a5e591a2b2f46db6caa1defd49530e" Selector="&lt;webctrl id='tableExportar:9:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22cfbe14-a848-48be-a047-2cd5673bbf78" InformativeScreenshot="32a5e591a2b2f46db6caa1defd49530e" Selector="&lt;webctrl id='tableExportar:9:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -208,7 +208,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'LEYENDA 1'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_11">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:10:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6de72249-77c9-421c-b000-1a57fe51ffe1" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:10:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -217,7 +217,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'LEYENDA 2'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_12">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:11:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="95c7d806-95f5-4211-86b5-3f35267c8dcd" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:11:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -226,7 +226,7 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'CONSECUTIVO'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_13">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:12:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b765594a-9d58-447f-96e2-f8001889a4c0" InformativeScreenshot="3eb9b774acf172f4f86c45632025a364" Selector="&lt;webctrl id='tableExportar:12:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -235,14 +235,14 @@
             </ui:Check>
             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INFORMACION ADICIONAL SPEI/SPID'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Check_14">
               <ui:Check.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="296ea4d04a6955ca16a89d254035f719" Selector="&lt;webctrl id='tableExportar:13:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="165227aa-4328-49a0-8d26-fbb627cec573" InformativeScreenshot="296ea4d04a6955ca16a89d254035f719" Selector="&lt;webctrl id='tableExportar:13:listIncluir' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ui:Check.Target>
             </ui:Check>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="Se coloca un delay, dado quela plataforma suele demorar en cargar, de continuar el proceso de manera normal este es interrumpido." ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Transmitir'" sap:VirtualizedContainerService.HintSize="562,163" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="Se coloca un delay, dado quela plataforma suele demorar en cargar, de continuar el proceso de manera normal este es interrumpido." ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Transmitir'" sap:VirtualizedContainerService.HintSize="562,166" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -254,7 +254,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="96ef5051e2713c9be705b1304560d69a" Selector="&lt;webctrl id='iconosExportar:lnkIconTran_iconosExportar' tag='A' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ec1d6690-2b71-479d-92ea-56393c780cd6" InformativeScreenshot="96ef5051e2713c9be705b1304560d69a" Selector="&lt;webctrl id='iconosExportar:lnkIconTran_iconosExportar' tag='A' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -266,75 +266,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,893" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,815" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <DoWhile sap2010:Annotation.AnnotationText="En ocasiones al realizar una descarga en Internet Explorer se presenta una incidencia, en la cual el click sobre la flecha 'Save' no es ejecutado a la primera, por lo cual se prevee dicho caso abandonando este ciclo una vez asegurado que haya realizado el click necesario" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,723" sap2010:WorkflowViewState.IdRef="DoWhile_1">
-                    <DoWhile.Variables>
-                      <Variable x:TypeArguments="x:Boolean" Name="SaveAs" />
-                    </DoWhile.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <DoWhile.Condition>
-                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not SaveAs" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-                    </DoWhile.Condition>
-                    <Sequence sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'Aviso Descarga'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Activate_1">
-                        <ui:Activate.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dc03ce9380b7c2db8d2cb7f1a99aa9f4" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='SEL - Scotia en Línea - Internet Explorer' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;" WaitForReady="COMPLETE">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                          </ui:Target>
-                        </ui:Activate.Target>
-                      </ui:Activate>
-                      <ui:UiElementExists DisplayName="Element Exists 'Save Menu'" Exists="[SaveAs]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
-                        <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="91394c288f7d15f987c333bcfb621548" TimeoutMS="5000">
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:UiElementExists.Target>
-                      </ui:UiElementExists>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Save as'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3ca125bef463c90f00c9c6730ff8e2a1" Selector="&lt;wnd app='iexplore.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;" WaitForReady="COMPLETE">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                          </ui:Target>
-                        </ui:Click.Target>
-                      </ui:Click>
-                    </Sequence>
-                  </DoWhile>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Click para desplegar el menu y seleccionar 'Save As'. Es necesario colocar un delay puesto la plataforma en sí suele demorar en cargar, por tanto dicho recuadro tarda en aparecer, de continuar el proceso de manera normal este es interrumpido." ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="562,193" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Click para desplegar el menu y seleccionar 'Save As'. Es necesario colocar un delay puesto la plataforma en sí suele demorar en cargar, por tanto dicho recuadro tarda en aparecer, de continuar el proceso de manera normal este es interrumpido." ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="562,198" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -346,7 +278,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ded9f316626dc2edffd3bb2ab86e01c0" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='SEL - Scotia en Línea - Internet Explorer' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="365275fe-39fc-45c6-82cf-b3babce5ac63" InformativeScreenshot="ded9f316626dc2edffd3bb2ab86e01c0" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='SEL - Scotia en Línea - Internet Explorer' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -370,7 +302,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a550c5885d18909aa9d80472286ad877" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='*Notepad' /&gt;&lt;ctrl automationid='MenuBar' idx='1' name='Application' role='menu bar' /&gt;&lt;ctrl name='File' role='menu item' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f1b4c1e-5595-4cfa-a5f4-7b4c6c7ae099" InformativeScreenshot="a550c5885d18909aa9d80472286ad877" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='*Notepad' /&gt;&lt;ctrl automationid='MenuBar' idx='1' name='Application' role='menu bar' /&gt;&lt;ctrl name='File' role='menu item' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -392,7 +324,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c40db9e154219a51082a7c0c52a6f6f9" Selector="&lt;wnd app='notepad.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='4' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a8afa8e-2c61-453d-bdd5-23b571df1dd3" InformativeScreenshot="c40db9e154219a51082a7c0c52a6f6f9" Selector="&lt;wnd app='notepad.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='4' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -404,7 +336,7 @@
             </ui:Click>
             <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'File name'" EmptyField="True" sap:VirtualizedContainerService.HintSize="562,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_RutaUSD_Selec + &quot;MD_DOLARES_&quot; + in_NumCuentaUSD_Selec + Day + &quot;.txt&quot;]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="cfe82de02b5751c693618ad6f89346e5" Selector="&lt;wnd app='*.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8681305b-09a6-4480-a4c1-35e06dae1875" InformativeScreenshot="cfe82de02b5751c693618ad6f89346e5" Selector="&lt;wnd app='*.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -423,7 +355,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="abcb1fc2b8470aeb570259f95bb92d4c" Selector="&lt;wnd app='*.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="86507ea5-08ab-4f07-95df-65a3b75b57b7" InformativeScreenshot="abcb1fc2b8470aeb570259f95bb92d4c" Selector="&lt;wnd app='*.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -442,7 +374,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="befee555f3d24694f79a4257f70f08f3" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Save As' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7dd3c198-c6d7-4acd-bdb2-9c94bc932f5c" InformativeScreenshot="befee555f3d24694f79a4257f70f08f3" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Save As' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>

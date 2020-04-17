@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>628,1158</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>624,1226</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,41 +60,41 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Process" sap:VirtualizedContainerService.HintSize="638,993" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Secuencia encargada de tomar la decision sobre que asistente es el que va a ser ejecutado" DisplayName="Process" sap:VirtualizedContainerService.HintSize="634,1061" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="Day" />
+    </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 295.641666666667,107.5 295.641666666667,126.5</av:PointCollection>
-        <x:Double x:Key="Height">957</x:Double>
-        <x:Double x:Key="Width">604</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Double x:Key="Height">993.7203534189714</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,99</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID11" DisplayName="Banamex" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-      <FlowDecision.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="io_TransactionID = 1" />
-      </FlowDecision.Condition>
+    <FlowDecision x:Name="__ReferenceID11" Condition="[io_TransactionID = 1]" DisplayName="Banamex" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">260.641666666667,126.5</av:Point>
+          <av:Point x:Key="ShapeLocation">260.641666666667,226.5</av:Point>
           <av:Size x:Key="ShapeSize">70,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">260.641666666667,170 131,170 131,220</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">330.641666666667,170 345.5,170 345.5,326.5</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">260.641666666667,270 131,270 131,320</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">330.641666666667,270 345.5,270 345.5,426.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">0,220</av:Point>
+              <av:Point x:Key="ShapeLocation">0,320</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">131,280 130,280 130,294.02</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">131,380 130,380 130,404.02</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Aumentar contador a banamex" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -114,7 +114,7 @@
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">30,294.02</av:Point>
+                  <av:Point x:Key="ShapeLocation">30,404.02</av:Point>
                   <av:Size x:Key="ShapeSize">200,52</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -125,40 +125,22 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SecuenciaDescargas workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Banamex\Bancanet\SecuenciaDescargas.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Proceso banamex" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Banamex\Bancanet\SecuenciaDescargas.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NumSucursal_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumSucursalBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXN_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaMXNBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXN_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaMXNBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchMXN_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NombreArchivoOriginal_MXNBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchFinalMXN_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaUSDBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_RutaUSD_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaUSDBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchUSD_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NombreArchivoOriginal_USDBanamex&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchFinalUSD_Secuencia">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PrefijoArchivo_USD&quot;).ToString" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NumSucursal_Secuencia">[in_Config("NumSucursalBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXN_Secuencia">[in_Config("NumCuentaMXNBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXN_Secuencia">[in_Config("RutaMXNBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchMXN_Secuencia">[in_Config("NombreArchivoOriginal_MXNBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchFinalMXN_Secuencia">[in_Config("PrefijoArchivo_MXN").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Secuencia">[in_Config("NumCuentaUSDBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_RutaUSD_Secuencia">[in_Config("RutaUSDBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchUSD_Secuencia">[in_Config("NombreArchivoOriginal_USDBanamex").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreArchFinalUSD_Secuencia">[in_Config("PrefijoArchivo_USD").ToString]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,854" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,592" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -169,49 +151,15 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Generar Logs de error Banamex" sap:VirtualizedContainerService.HintSize="380,784" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="Day" />
-                        </Sequence.Variables>
+                      <Sequence DisplayName="Generar Logs de error Banamex" sap:VirtualizedContainerService.HintSize="376,522" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <cd:GetCurrentDateTime CurrentDate="[Day]" DisplayName="Get current date time" Format="yy-MM-dd HH:mm" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="GetCurrentDateTime_1" />
-                        <ui:MultipleAssign DisplayName="Multiple Assign dia" sap:VirtualizedContainerService.HintSize="338,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                          <ui:MultipleAssign.AssignOperations>
-                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">[Day.Replace(":", "")]</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">[Day.Replace("-", "")]</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">[Day.Replace(" ", "")]</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                            </scg:List>
-                          </ui:MultipleAssign.AssignOperations>
-                        </ui:MultipleAssign>
-                        <ui:WriteTextFile DisplayName="Escribir log USD Banamex" FileName="[in_Config(&quot;RutaUSDBanamex&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ &quot;0&quot; + in_Config(&quot;NumSucursalBanamex&quot;).ToString + in_Config(&quot;NumCuentaUSDBanamex&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="Descarga fallida por temas de la plataforma" />
-                        <ui:WriteTextFile DisplayName="Escribir log MXN Banamex" FileName="[in_Config(&quot;RutaMXNBanamex&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString+ &quot;0&quot; + in_Config(&quot;NumSucursalBanamex&quot;).ToString + in_Config(&quot;NumCuentaMXNBanamex&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="Descarga fallida por temas de la plataforma" />
-                        <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de banamex" DisplayName="Esperar ejecucion Banamex" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="338,82" sap2010:WorkflowViewState.IdRef="Delay_1">
+                        <ui:WriteTextFile DisplayName="Escribir log USD Banamex" FileName="[in_Config(&quot;RutaUSDBanamex&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ &quot;0&quot; + in_Config(&quot;NumSucursalBanamex&quot;).ToString + in_Config(&quot;NumCuentaUSDBanamex&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="Descarga fallida por temas de la plataforma" />
+                        <ui:WriteTextFile DisplayName="Escribir log MXN Banamex" FileName="[in_Config(&quot;RutaMXNBanamex&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString+ &quot;0&quot; + in_Config(&quot;NumSucursalBanamex&quot;).ToString + in_Config(&quot;NumCuentaMXNBanamex&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="Descarga fallida por temas de la plataforma" />
+                        <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de banamex" DisplayName="Esperar ejecucion Banamex" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="Delay_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -228,26 +176,23 @@
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID1" DisplayName="Banorte" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-          <FlowDecision.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="io_TransactionID=2" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID1" Condition="[io_TransactionID=2]" DisplayName="Banorte" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">310.5,326.5</av:Point>
+              <av:Point x:Key="ShapeLocation">310.5,426.5</av:Point>
               <av:Size x:Key="ShapeSize">70,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">310.5,370 160,370 160,410</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">380.5,370 410.5,370 410.5,476.5 355.5,476.5 355.5,506.5</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">310.5,470 160,470 160,490</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">380.5,470 410,470 410,576.5 350,576.5 350,606.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
             <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">29,410</av:Point>
+                  <av:Point x:Key="ShapeLocation">29,490</av:Point>
                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">160,470 160,484</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">160,550 160,574</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Assign DisplayName="Aumentar contador a banorte" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -267,7 +212,7 @@
                 <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">60,484</av:Point>
+                      <av:Point x:Key="ShapeLocation">60,574</av:Point>
                       <av:Size x:Key="ShapeSize">200,52</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -278,25 +223,17 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SecuenciaDescargas workflow" sap:VirtualizedContainerService.HintSize="357,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Banorte\BancaPorInternet\SecuenciaDescargas.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke proceso banorte" sap:VirtualizedContainerService.HintSize="357,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Banorte\BancaPorInternet\SecuenciaDescargas.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Secuencia">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaUSDBanorte&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXP_Secuencia">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaMXNBanorte&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXP_Secuencia">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaPesosBanorte&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_RutaDolares_Secuencia">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaDolaresBanorte&quot;).ToString" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Secuencia">[in_Config("NumCuentaUSDBanorte").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXP_Secuencia">[in_Config("NumCuentaMXNBanorte").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXP_Secuencia">[in_Config("RutaPesosBanorte").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_RutaDolares_Secuencia">[in_Config("RutaDolaresBanorte").ToString]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,854" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,592" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -307,49 +244,15 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Generar errores log Banorte" sap:VirtualizedContainerService.HintSize="380,784" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="Day" />
-                            </Sequence.Variables>
+                          <Sequence DisplayName="Generar errores log Banorte" sap:VirtualizedContainerService.HintSize="376,522" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <cd:GetCurrentDateTime CurrentDate="[Day]" DisplayName="Get current date time" Format="yy-MM-dd HH:mm" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="GetCurrentDateTime_2" />
-                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="338,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
-                              <ui:MultipleAssign.AssignOperations>
-                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="x:String">[Day.Replace(":", "")]</InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="x:String">[Day.Replace("-", "")]</InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="x:String">[Day.Replace(" ", "")]</InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                </scg:List>
-                              </ui:MultipleAssign.AssignOperations>
-                            </ui:MultipleAssign>
-                            <ui:WriteTextFile DisplayName="Escribir log USD banorte" FileName="[in_Config(&quot;RutaDolaresBanorte&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ in_Config(&quot;NumCuentaUSDBanorte&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="Descarga fallida por temas de la plataforma" />
-                            <ui:WriteTextFile DisplayName="Escribir log MXN Banorte" FileName="[in_Config(&quot;RutaPesosBanorte&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString + in_Config(&quot;NumCuentaMXNBanorte&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_4" Text="Descarga fallida por temas de la plataforma" />
-                            <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de banorte" DisplayName="Esperar ejecucion Banorte" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="338,82" sap2010:WorkflowViewState.IdRef="Delay_2">
+                            <ui:WriteTextFile DisplayName="Escribir log USD banorte" FileName="[in_Config(&quot;RutaDolaresBanorte&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ in_Config(&quot;NumCuentaUSDBanorte&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="Descarga fallida por temas de la plataforma" />
+                            <ui:WriteTextFile DisplayName="Escribir log MXN Banorte" FileName="[in_Config(&quot;RutaPesosBanorte&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString + in_Config(&quot;NumCuentaMXNBanorte&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_4" Text="Descarga fallida por temas de la plataforma" />
+                            <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de banorte" DisplayName="Esperar ejecucion Banorte" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="Delay_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -366,26 +269,23 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID5" DisplayName="Santander" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-              <FlowDecision.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="io_TransactionID = 3" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID5" Condition="[io_TransactionID = 3]" DisplayName="Santander" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">320.5,506.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">315,606.5</av:Point>
                   <av:Size x:Key="ShapeSize">70,87</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">320.5,550 140,550 140,580</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">390.5,550 410,550 410,676.5</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">315,650 140,650 140,670</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">385,650 410,650 410,776.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
                 <FlowStep x:Name="__ReferenceID7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">9,580</av:Point>
+                      <av:Point x:Key="ShapeLocation">9,670</av:Point>
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">140,640 140,654</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">140,730 140,754</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign DisplayName="Aumentar contador a santander" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -405,7 +305,7 @@
                     <FlowStep x:Name="__ReferenceID6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">40,654</av:Point>
+                          <av:Point x:Key="ShapeLocation">40,754</av:Point>
                           <av:Size x:Key="ShapeSize">200,52</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -416,34 +316,22 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SecuenciaDescargas workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Santander\Enlace M\SecuenciaDescargas.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke proceso santander" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Santander\Enlace M\SecuenciaDescargas.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXN_Sec">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaMXNSantander&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Prefijo_MXN_Sec">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXN_Sec">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaMXNSantander&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_RutaUSD_Sec">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaUSDSantander&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Prefijo_USD_Sec">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PrefijoArchivo_USD&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Sec">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaUSDSantander&quot;).ToString" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXN_Sec">[in_Config("RutaMXNSantander").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Prefijo_MXN_Sec">[in_Config("PrefijoArchivo_MXN").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXN_Sec">[in_Config("NumCuentaMXNSantander").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_RutaUSD_Sec">[in_Config("RutaUSDSantander").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Prefijo_USD_Sec">[in_Config("PrefijoArchivo_USD").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Sec">[in_Config("NumCuentaUSDSantander").ToString]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,592" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -451,49 +339,15 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Generar errores log Santander" sap:VirtualizedContainerService.HintSize="380,784" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:String" Name="Day" />
-                                </Sequence.Variables>
+                              <Sequence DisplayName="Generar errores log Santander" sap:VirtualizedContainerService.HintSize="376,522" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <cd:GetCurrentDateTime CurrentDate="[Day]" DisplayName="Get current date time" Format="yy-MM-dd HH:mm" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="GetCurrentDateTime_3" />
-                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="338,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
-                                  <ui:MultipleAssign.AssignOperations>
-                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                                        <ui:AssignOperation.To>
-                                          <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                        </ui:AssignOperation.To>
-                                        <ui:AssignOperation.Value>
-                                          <InArgument x:TypeArguments="x:String">[Day.Replace(":", "")]</InArgument>
-                                        </ui:AssignOperation.Value>
-                                      </ui:AssignOperation>
-                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                                        <ui:AssignOperation.To>
-                                          <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                        </ui:AssignOperation.To>
-                                        <ui:AssignOperation.Value>
-                                          <InArgument x:TypeArguments="x:String">[Day.Replace("-", "")]</InArgument>
-                                        </ui:AssignOperation.Value>
-                                      </ui:AssignOperation>
-                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                                        <ui:AssignOperation.To>
-                                          <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                        </ui:AssignOperation.To>
-                                        <ui:AssignOperation.Value>
-                                          <InArgument x:TypeArguments="x:String">[Day.Replace(" ", "")]</InArgument>
-                                        </ui:AssignOperation.Value>
-                                      </ui:AssignOperation>
-                                    </scg:List>
-                                  </ui:MultipleAssign.AssignOperations>
-                                </ui:MultipleAssign>
-                                <ui:WriteTextFile DisplayName="Escribir log USD santander" FileName="[in_Config(&quot;RutaUSDSantander&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ in_Config(&quot;NumCuentaUSDSantander&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_5" Text="Descarga fallida por temas de la plataforma" />
-                                <ui:WriteTextFile DisplayName="Escribir log MXN Banorte" FileName="[in_Config(&quot;RutaMXNSantander&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString + in_Config(&quot;NumCuentaMXNSantander&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_6" Text="Descarga fallida por temas de la plataforma" />
-                                <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de santander" DisplayName="Esperar ejecucion santander" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="338,82" sap2010:WorkflowViewState.IdRef="Delay_3">
+                                <ui:WriteTextFile DisplayName="Escribir log USD santander" FileName="[in_Config(&quot;RutaUSDSantander&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ in_Config(&quot;NumCuentaUSDSantander&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_5" Text="Descarga fallida por temas de la plataforma" />
+                                <ui:WriteTextFile DisplayName="Escribir log MXN Santander" FileName="[in_Config(&quot;RutaMXNSantander&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString + in_Config(&quot;NumCuentaMXNSantander&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_6" Text="Descarga fallida por temas de la plataforma" />
+                                <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de santander" DisplayName="Esperar ejecucion santander" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="Delay_3">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -510,25 +364,22 @@
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowDecision x:Name="__ReferenceID8" DisplayName="Scotiabank" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-                  <FlowDecision.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="io_TransactionID = 4" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID8" Condition="[io_TransactionID = 4]" DisplayName="Scotiabank" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">375,676.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">375,776.5</av:Point>
                       <av:Size x:Key="ShapeSize">70,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">375,720 160,720 160,760</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">375,820 160,820 160,840</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
                     <FlowStep x:Name="__ReferenceID9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">29,760</av:Point>
+                          <av:Point x:Key="ShapeLocation">29,840</av:Point>
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">160,820 160,844</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">160,900 160,924</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign DisplayName="Reiniciar contador" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
@@ -548,36 +399,28 @@
                         <FlowStep x:Name="__ReferenceID10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">60,844</av:Point>
+                              <av:Point x:Key="ShapeLocation">60,924</av:Point>
                               <av:Size x:Key="ShapeSize">200,52</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Try Catch proceso Scotiabank" sap:VirtualizedContainerService.HintSize="434,1020" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                          <TryCatch DisplayName="Try Catch proceso Scotiabank" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <TryCatch.Try>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SecuenciaDescargas workflow" sap:VirtualizedContainerService.HintSize="356,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Scotiabank\ScotiaEnLinea\SecuenciaDescargas.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Proceso scotiabank" sap:VirtualizedContainerService.HintSize="359,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Scotiabank\ScotiaEnLinea\SecuenciaDescargas.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXN_Sec">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaMXNScotiabank&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXN_Sec">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaMXNScotiabank&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_RutaUSD_Sec">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RutaUSDScotiabank&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Sec">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;NumCuentaUSDScotiabank&quot;).ToString" />
-                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaMXN_Sec">[in_Config("NumCuentaMXNScotiabank").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_RutaMXN_Sec">[in_Config("RutaMXNScotiabank").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_RutaUSD_Sec">[in_Config("RutaUSDScotiabank").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_NumCuentaUSD_Sec">[in_Config("NumCuentaUSDScotiabank").ToString]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </TryCatch.Try>
                             <TryCatch.Catches>
-                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,854" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,587" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -588,48 +431,14 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Generar errores log Scotiabank" sap:VirtualizedContainerService.HintSize="380,784" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="x:String" Name="Day" />
-                                    </Sequence.Variables>
+                                  <Sequence DisplayName="Generar errores log Scotiabank" sap:VirtualizedContainerService.HintSize="380,518" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <cd:GetCurrentDateTime CurrentDate="[Day]" DisplayName="Get current date time" Format="yy-MM-dd HH:mm" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="GetCurrentDateTime_4" />
-                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="338,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
-                                      <ui:MultipleAssign.AssignOperations>
-                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
-                                            <ui:AssignOperation.To>
-                                              <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                            </ui:AssignOperation.To>
-                                            <ui:AssignOperation.Value>
-                                              <InArgument x:TypeArguments="x:String">[Day.Replace(":", "")]</InArgument>
-                                            </ui:AssignOperation.Value>
-                                          </ui:AssignOperation>
-                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
-                                            <ui:AssignOperation.To>
-                                              <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                            </ui:AssignOperation.To>
-                                            <ui:AssignOperation.Value>
-                                              <InArgument x:TypeArguments="x:String">[Day.Replace("-", "")]</InArgument>
-                                            </ui:AssignOperation.Value>
-                                          </ui:AssignOperation>
-                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
-                                            <ui:AssignOperation.To>
-                                              <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
-                                            </ui:AssignOperation.To>
-                                            <ui:AssignOperation.Value>
-                                              <InArgument x:TypeArguments="x:String">[Day.Replace(" ", "")]</InArgument>
-                                            </ui:AssignOperation.Value>
-                                          </ui:AssignOperation>
-                                        </scg:List>
-                                      </ui:MultipleAssign.AssignOperations>
-                                    </ui:MultipleAssign>
-                                    <ui:WriteTextFile DisplayName="Escribir log USD Scotiabank" FileName="[in_Config(&quot;RutaMXNScotiabank&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ in_Config(&quot;NumCuentaMXNScotiabank&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_7" Text="Descarga fallida por temas de la plataforma" />
-                                    <ui:WriteTextFile DisplayName="Escribir log MXN Scotiabank" FileName="[in_Config(&quot;RutaMXNScotiabank&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString + in_Config(&quot;NumCuentaMXNScotiabank&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_8" Text="Descarga fallida por temas de la plataforma" />
+                                    <ui:WriteTextFile DisplayName="Escribir log USD Scotiabank" FileName="[in_Config(&quot;RutaMXNScotiabank&quot;).ToString + in_Config(&quot;PrefijoArchivo_USD&quot;).ToString+ in_Config(&quot;NumCuentaMXNScotiabank&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_7" Text="Descarga fallida por temas de la plataforma" />
+                                    <ui:WriteTextFile DisplayName="Escribir log MXN Scotiabank" FileName="[in_Config(&quot;RutaMXNScotiabank&quot;).ToString + in_Config(&quot;PrefijoArchivo_MXN&quot;).ToString + in_Config(&quot;NumCuentaMXNScotiabank&quot;).ToString + Day + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="338,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_8" Text="Descarga fallida por temas de la plataforma" />
                                     <Delay sap2010:Annotation.AnnotationText="Se agrega una espera para simular el tiempo de espera de la ejecucion de scotiabank" DisplayName="Esperar ejecucion Scotiabank" Duration="00:02:00" sap:VirtualizedContainerService.HintSize="338,82" sap2010:WorkflowViewState.IdRef="Delay_4">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -664,5 +473,60 @@
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
+    <FlowStep x:Name="__ReferenceID12">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,154</av:Point>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,206 295.641666666667,206 295.641666666667,226.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign DisplayName="Multiple Assign dia" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Day.Replace(":", "")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Day.Replace("-", "")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Day]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Day.Replace(" ", "")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID11</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID13">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,99</av:Point>
+          <av:Size x:Key="ShapeSize">200,22</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,121 300,154</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <cd:GetCurrentDateTime CurrentDate="[Day]" DisplayName="Get current date time" Format="yy-MM-dd HH:mm" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetCurrentDateTime_5" />
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID12</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
   </Flowchart>
 </Activity>
